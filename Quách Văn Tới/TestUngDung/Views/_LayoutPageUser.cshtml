@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/stylemenu.css" rel="stylesheet" />
+    <title>Trang Nguoi Dung</title>
+    <style>
+        .body {
+            padding-top: 150px;
+        }
+
+        nav ul li {
+            width: 19.725%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="~/UserPage/Index" title="Trang Chủ">HOME</a></li>
+            <li><a href="~/UserPage/viewTeLePhone/1" title="IPHONE">IPHONE</a></li>
+            <li><a href="~/UserPage/viewTeLePhone/2" title="SAMSUNG">SAMSUNG</a></li>
+            <li><a href="~/UserPage/viewTeLePhone/3" title="OPPO">OPPO</a></li>
+            <li><a href="~/Login/Index" title="Đăng Xuất">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="body">
+        @RenderBody()
+    </div>
+</body>
+</html>

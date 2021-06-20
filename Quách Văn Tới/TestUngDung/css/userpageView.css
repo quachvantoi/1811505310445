@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.tong {
+    width: 250px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 1px solid #E9E9E9;
+    float: left;
+}
+
+.tong img {
+    width: 250px;
+    padding-bottom: 14px;
+}
+
+.tong .canh1 {
+    font-family: tahoma;
+    color: black;
+    font-size: 13px;
+    padding-left: 10px;
+}

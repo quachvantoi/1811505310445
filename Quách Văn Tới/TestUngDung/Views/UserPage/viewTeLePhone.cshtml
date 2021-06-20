@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ModelEF.Model.Product>
+@{
+    ViewBag.Title = "viewTeLePhone";
+    <link href="~/css/userpageView.css" rel="stylesheet" />
+    Layout = "~/Views/_LayoutPageUser.cshtml";
+}
+<style>
+    .body {
+        padding-top: 0px;
+    }
+</style>
+@foreach (var item in Model)
+{
+    <div class="tong">
+        <img src="@item.Image" alt="@item.Name">
+        <p class="canh1">Tên: @item.Name</p>
+        <p class="canh1">Giá: @item.UnitCost</p>
+        <p class="canh1">Mô Tả: @item.Description</p>
+    </div>
+}

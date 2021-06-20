@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/stylemenu.css" rel="stylesheet" />
+    <title>Trang Admin</title>
+    <style>
+        .body {
+            padding-top: 150px;
+        }
+
+        nav ul li {
+            width: 24.6%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="~/User/Index" title="User">User</a></li>
+            <li><a href="~/Product/Index" title="Product">Product</a></li>
+            <li><a href="~/Category/Index" title="Category">Category</a></li>
+            <li><a href="~/Login/Index" title="Đăng Xuất">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="body">
+        @RenderBody()
+    </div>
+</body>
+</html>

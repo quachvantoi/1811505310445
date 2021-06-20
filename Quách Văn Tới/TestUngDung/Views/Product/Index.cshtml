@@ -1,0 +1,74 @@
+﻿@model PagedList.IPagedList<ModelEF.Model.Product>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPageMenu.cshtml";
+}
+<style>
+    .pagination-container ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+</style>
+
+<p>
+    @Html.ActionLink("Thêm Sản Phẩm", "Create")
+</p>
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Tên Sản Phẩm
+                </th>
+                <th>
+                    Đơn Giá
+                </th>
+                <th>
+                    Số Lượng
+                </th>
+                <th>
+                    Loại Sản Phẩm
+                </th>
+                <th>
+                    Status
+                </th>
+                <th> Khác </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitCost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

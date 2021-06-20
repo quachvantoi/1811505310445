@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPageLogin.cshtml";
+}
+
+<div class="login-form">
+    <h1>@ViewBag.login</h1>
+
+    <form action="/Login/KiemTraDangNhap" method="post">
+
+        <span>
+
+            <input type="text" name="Username" class="user" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
+        </span>
+        <span>
+            <input type="password" name="Password" class="lock" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+        </span>
+        <div class="submit">
+            <input type="submit" onclick="myFunction()" value="LOGIN" />
+        </div>
+        @*<p>@Html.ActionLink("Admin", "trangchu") </p>*@
+    </form>
+</div>
+
